@@ -6,4 +6,5 @@ tags
 *.vim
 *.orig
 *.rej
+_site
 ignore

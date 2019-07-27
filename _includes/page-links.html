@@ -1,0 +1,45 @@
+{% comment %}
+  The code below dynamically generates a sidebar nav of pages with
+  `sidebar_link: true` in the front-matter. See readme for usage.
+{% endcomment %}
+{% assign pages_list = site.pages %}
+
+<a class="page-link">&emsp;Dienstleistung</a>
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.category == "Dienstleistung" %}
+      <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">&emsp;&emsp;{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<a class="page-link">&emsp;Infrastruktur</a>
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.category == "Infrastruktur" %}
+      <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">&emsp;&emsp;{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<a class="page-link">&emsp;Produktion</a>
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.category == "Produktion" %}
+      <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">&emsp;&emsp;{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+<a class="page-link">&emsp;Allgemein</a>
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.category == "Allgemein" %}
+      <a class="page-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ site.baseurl }}{{ node.url }}">&emsp;&emsp;{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}

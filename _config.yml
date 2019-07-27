@@ -1,2 +1,17 @@
-baseurl: /Wechselkurs
-exclude: ['README.md']
+title:            Wechselkurs
+tagline:          'Freie Alternativen'
+#description:
+url:              wechselkurs.github.io
+baseurl:          /Wechselkurs
+#exclude:          ['README.md']
+theme:            jekyll-theme-hydeout
+
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+# version:            
+sidebar_home_link:  true
+
+github:
+  repo:             https://github.com/wechselkurs/wechselkurs.github.io
